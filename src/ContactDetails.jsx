@@ -38,7 +38,7 @@ return (
         <p>Email: {contact.email}</p>
 
 
-    <button onClick={handleDelete}>
+    <button className="delete-btn" onClick={handleDelete}>
      Delete
     </button>
 

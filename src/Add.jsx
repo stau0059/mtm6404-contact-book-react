@@ -39,11 +39,11 @@ const handleSubmit = async (e) => {
 }
 
 return (
-    <>
-    <h1>Add Contact</h1>
+<div className="container">
+<h1 className="title">Add Contact</h1>
     
-    <form onSubmit={handleSubmit}>
-        <div>
+    <form onSubmit={handleSubmit} className="form">
+
             <input type="text"
             name="firstName"
             placeholder="First Name"
@@ -51,9 +51,7 @@ return (
             onChange={handleChange}
             required
             />
-        </div>
 
-        <div>
             <input type="text"
             name="lastName"
             placeholder="Last Name"
@@ -61,9 +59,7 @@ return (
             onChange={handleChange}
             required
             />
-        </div>
-        
-        <div>
+    
             <input type="email"
             name="email"
             placeholder="Email"
@@ -71,13 +67,12 @@ return (
             onChange={handleChange}
             required
             />
-        </div>
     
-    <button type="submit">Add Contact</button>
+    <button type="submit" className="submit-btn">Add Contact</button>
 
     </form>
 
-    </>
+    </div>
 );
 
 }

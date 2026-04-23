@@ -1,3 +1,4 @@
+import './styles/index.css';
 import { useState, useEffect } from 'react'
 import db from './utils/db';
 import { Link } from 'react-router-dom';
@@ -17,8 +18,6 @@ const App = () => {
 
         data.sort((a,b) => a.lastName.localeCompare(b.lastName));
         
-        console.log(data);
-        
         setContacts(data);
     }
 
@@ -28,33 +27,40 @@ const App = () => {
 
 
     return (
+
         <>
-        <h1>Contact Book</h1>
+
+         <h1>Contact Book</h1>
 
         
-        <input type="text" placeholder="Search contacts..."
+        <input type="text" className="search-bar" 
+        placeholder="Search contacts..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        />
 
-        <ul>
+        />
+    
+         <ul>
             {contacts.filter(contact => 
-            contact.firstName.toLowerCase().includes(search.toLowerCase())
+            contact.firstName.toLowerCase().includes(search.toLowerCase()) ||
+            contact.lastName.toLowerCase().includes(search.toLowerCase())
             )
+
             .map((contact) => (
 
-            <li key={contact.id}>
+            <li key={contact.id} className="contact">
             <Link to={`/contact/${contact.id}`}>
                  {contact.firstName} {contact.lastName}
-                    </Link>
-                </li>
+             </Link>
+            </li>
+
             ))
             }
 
         </ul>
         
         <button>
-            <Link to="/add">Add Contact</Link>
+            <Link to="/add" className="add-btn">Add Contact</Link>
         </button>
         </>
     );
