@@ -51,6 +51,7 @@ body {
 }
 
 .add-btn {
+ 
   color: black;
   text-decoration: none;
   cursor:grab;
@@ -69,7 +70,7 @@ color: black;
 background-color: red;
 cursor:grab;
 color: white;
-border: red;
+border: black;
  }
 
  h1 {
