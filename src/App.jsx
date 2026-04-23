@@ -8,17 +8,20 @@ const App = () => {
 
     const [contacts, setContacts] = useState([]);
     const [search, setSearch] = useState('');
+    const [loading, setLoading] = useState(true);
 
-    const fetchContacts = async () => {
+    const fetchContacts = async () => { setLoading(true);
+
         const docSnapshot = await getDocs(collection(db, "contacts"));
         const data = docSnapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
         }));
 
-        data.sort((a,b) => a.lastName.localeCompare(b.lastName));
+        data.sort((a, b) => a.lastName.localeCompare(b.lastName));
         
         setContacts(data);
+        setLoading(false);
     }
 
     useEffect(() => {
@@ -39,7 +42,11 @@ const App = () => {
         onChange={(e) => setSearch(e.target.value)}
 
         />
-    
+
+        {loading ? ( <p>Loading your contacts...</p> ) : (
+
+        <div>
+
          <ul>
             {contacts.filter(contact => 
             contact.firstName.toLowerCase().includes(search.toLowerCase()) ||
@@ -55,7 +62,7 @@ const App = () => {
             </li>
 
             ))
-            }
+        }
 
         </ul>
         
@@ -63,6 +70,12 @@ const App = () => {
             <Link to="/add" className="add-btn">Add Contact</Link>
         </button>
         </div>
+
+)}
+
+</div>
+
     );
-}
+};
+
 export default App;
