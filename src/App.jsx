@@ -28,7 +28,7 @@ const App = () => {
 
     return (
 
-        <>
+        <div>
 
          <h1>Contact Book</h1>
 
@@ -62,7 +62,7 @@ const App = () => {
         <button>
             <Link to="/add" className="add-btn">Add Contact</Link>
         </button>
-        </>
+        </div>
     );
 }
 export default App;
