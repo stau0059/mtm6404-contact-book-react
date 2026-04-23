@@ -1,53 +1,53 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
-  margin: 0;
-  padding: 20px;
+font-family: Arial, Helvetica, sans-serif;
+background-color: white;
+margin: 0;
+padding: 20px;
 }
 
 .container {
-  max-width: 300px;
-  margin: 50px auto;
+max-width: 300px;
+margin: 50px auto;
 }
 
 .title {
-  font-size: 40px;
-  font-weight: 400;
-  margin-bottom: 20px;
+font-size: 40px;
+font-weight: 400;
+margin-bottom: 20px;
 }
 
 .form {
-  display: flex;
-  gap: 5px;
-  flex-direction: column;
-  column-width: 20px;
+display: flex;
+gap: 5px;
+flex-direction: column;
+column-width: 20px;
 }
 
 .form input {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid black;
-  font-size: 14px;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid black;
+font-size: 14px;
 }
 
 .contact {
-  display: flex;
-  flex-direction: column;
-  color:black;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  background-color: aliceblue;
+display: flex;
+flex-direction: column;
+color:black;
+padding: 10px;
+border-radius: 5px;
+font-size: 14px;
+background-color: aliceblue;
 }
 
 .contact a {
-  text-decoration: none;
-  color: black !important;
+text-decoration: none;
+color: black !important;
 }
 
 .contact a:hover {
-  background-color:dodgerblue;
-  color: white !important;
+background-color:dodgerblue;
+color: white !important;
 }
 
 .add-btn {
@@ -73,7 +73,7 @@ border: black;
  }
 
  h1 {
-  text-align: center;
+text-align: center;
  }
 
  .search-bar {
@@ -82,7 +82,7 @@ border: black;
 }
 
 .submit-btn {
-  cursor:grab;
+cursor:grab;
 }
 
 .submit-btn:hover {
